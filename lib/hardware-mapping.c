@@ -283,5 +283,29 @@ struct HardwareMapping matrix_hardware_mappings[] = {
   },
 #endif
 
+  {
+    .name          = "dmdreader",
+
+    .output_enable = GPIO_BIT(2),
+    .clock         = GPIO_BIT(4),
+    .strobe        = GPIO_BIT(3),
+
+    /* Address lines */
+    .a             = GPIO_BIT(12),
+    .b             = GPIO_BIT(24),
+    .c             = GPIO_BIT(27),
+    .d             = GPIO_BIT(18),
+    .e             = GPIO_BIT(6),  /* RxD kept free unless 1:64 */
+
+    /* Parallel chain 0, RGB for both sub-panels */
+    .p0_r1         = GPIO_BIT(21), 
+    .p0_g1         = GPIO_BIT(26), 
+    .p0_b1         = GPIO_BIT(20), 
+    .p0_r2         = GPIO_BIT(19), 
+    .p0_g2         = GPIO_BIT(16), 
+    .p0_b2         = GPIO_BIT(13), 
+
+  },
+
   {0}
 };
