@@ -291,19 +291,27 @@ struct HardwareMapping matrix_hardware_mappings[] = {
     .strobe        = GPIO_BIT(3),
 
     /* Address lines */
-    .a             = GPIO_BIT(12),
+    .a             = GPIO_BIT(22),
     .b             = GPIO_BIT(24),
     .c             = GPIO_BIT(27),
     .d             = GPIO_BIT(18),
-    .e             = GPIO_BIT(6),  /* RxD kept free unless 1:64 */
+    .e             = GPIO_BIT(25),
 
     /* Parallel chain 0, RGB for both sub-panels */
-    .p0_r1         = GPIO_BIT(21), 
-    .p0_g1         = GPIO_BIT(26), 
-    .p0_b1         = GPIO_BIT(20), 
-    .p0_r2         = GPIO_BIT(19), 
-    .p0_g2         = GPIO_BIT(16), 
-    .p0_b2         = GPIO_BIT(13), 
+    .p0_r1         = GPIO_BIT(6), 
+    .p0_g1         = GPIO_BIT(12), 
+    .p0_b1         = GPIO_BIT(5), 
+    .p0_r2         = GPIO_BIT(0), 
+    .p0_g2         = GPIO_BIT(1), 
+    .p0_b2         = GPIO_BIT(7), 
+
+    /* Parallel chain 1, RGB for both sub-panels */
+    .p1_r1         = GPIO_BIT(21),
+    .p1_g1         = GPIO_BIT(26),
+    .p1_b1         = GPIO_BIT(20),
+    .p1_r2         = GPIO_BIT(19),
+    .p1_g2         = GPIO_BIT(16),
+    .p1_b2         = GPIO_BIT(13),
 
   },
 
